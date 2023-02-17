@@ -12,5 +12,5 @@ module Exercise1 (
     input  [7:0] b,
     output [7:0] out
 );
-
+assign out = op[1] ? (op[0] ? a | b : a & b) : (a + (op[0] ? ~b + 1 : b));
 endmodule
